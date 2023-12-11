@@ -36,9 +36,9 @@ if "retry_error" not in st.session_state:
 
 # Set up the page
 #st.set_page_config(page_title="hacer.ai - Automatización")
-st.sidebar.title("hacer.ai")
+st.sidebar.title("Nodo + hacer.ai")
 st.sidebar.divider()
-st.sidebar.markdown("Herramienta de automatización de Documentos", unsafe_allow_html=True)
+st.sidebar.markdown("Mentor de Flutter", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
@@ -74,37 +74,11 @@ def get_latest_company_news(company_name):
         return []
 
 
-st.write("""<img width="180" src="https://hacer.ai/dist/assets/Logo_black.svg"/>   &nbsp; + &nbsp;   <img width="140" src="https://www.ccc.org.co/inc/themes/ccc-template/header/assets/img/icons/home/Logo-ccc.svg"/>""", unsafe_allow_html=True)
+st.write("""<img height="40" src="https://hacer.ai/dist/assets/Logo_black.svg"/>   &nbsp; + &nbsp;   <img height="40" src="https://nodoeafit.com/img/logo-nodo-eafit.png"/>""", unsafe_allow_html=True)
 
 # File uploader for CSV, XLS, XLSX
-uploaded_file = st.file_uploader("Carga tu Certificado de Camara de Comercio", type=["pdf"])
 
-if uploaded_file is not None:
-    # Determine the file type
-    file_type = uploaded_file.type
 
-    try:
-        # # Read the file into a Pandas DataFrame
-        # if file_type == "text/csv":
-        #     df = pd.read_csv(uploaded_file)
-        # elif file_type in ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]:
-        #     df = pd.read_excel(uploaded_file)
-
-        # Convert DataFrame to JSON
-        #json_str = df.to_json(orient='records', indent=4)
-        #file_stream = io.BytesIO(json_str.encode())
-
-        # Upload JSON data to OpenAI and store the file ID
-        file_response = client.files.create(file=uploaded_file, purpose='assistants')
-        st.session_state.file_id = file_response.id
-        st.success("Archivo cargado exitosamente!")
-
-        # Optional: Display and Download JSON
-        #st.text_area("JSON Output", json_str, height=300)
-        #st.download_button(label="Download JSON", data=json_str, file_name="converted.json", mime="application/json")
-    
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
 
 # Initialize OpenAI assistant
 if "assistant" not in st.session_state:
@@ -127,7 +101,7 @@ elif hasattr(st.session_state.run, 'status') and st.session_state.run.status == 
                     st.markdown(message_text)
 
 # Chat input and message creation with file ID
-if prompt := st.chat_input("Cómo puedo ayudarte con este documento?"):
+if prompt := st.chat_input("¿Cómo puedo ayudarte con tu proyecto de Flutter?"):
     with st.chat_message('user'):
         st.write(prompt)
 
