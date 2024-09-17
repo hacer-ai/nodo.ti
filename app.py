@@ -36,7 +36,7 @@ if "retry_error" not in st.session_state:
 
 # Set up the page
 #st.set_page_config(page_title="hacer.ai - Automatización")
-st.sidebar.title("Nodo + hacer.ai")
+st.sidebar.title("Nodo + Flutter")
 st.sidebar.divider()
 st.sidebar.markdown("Mentor de Flutter", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
@@ -74,7 +74,7 @@ def get_latest_company_news(company_name):
         return []
 
 
-st.write("""<img height="40" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/flutter-head.png"/>""", unsafe_allow_html=True)
+st.write("""<img height="70" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/flutter-head.png"/>""", unsafe_allow_html=True)
 
 # File uploader for CSV, XLS, XLSX
 
