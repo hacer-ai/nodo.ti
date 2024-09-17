@@ -10,7 +10,7 @@ import requests, os
 
 #Global Page Configuration
 st.set_page_config(
-    page_title="hacer.ai - Process Automation",
+    page_title="Nodo + Flutter",
     page_icon="🧠",
     initial_sidebar_state="collapsed",
 )
@@ -74,7 +74,7 @@ def get_latest_company_news(company_name):
         return []
 
 
-st.write("""<img height="40" src="https://hacer.ai/dist/assets/Logo_black.svg"/>   &nbsp; + &nbsp;   <img height="40" src="https://nodoeafit.com/img/logo-nodo-eafit.png"/>""", unsafe_allow_html=True)
+st.write("""<img height="40" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/flutter-head.png"/>""", unsafe_allow_html=True)
 
 # File uploader for CSV, XLS, XLSX
 
