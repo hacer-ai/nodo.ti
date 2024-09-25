@@ -44,6 +44,19 @@ st.sidebar.divider()
 
 st.write("""<img height="120" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/jobs-2.png"/>""", unsafe_allow_html=True)
 
+st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK, .stDeployButton {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Initialize OpenAI assistant
 if "assistant" not in st.session_state:
     openai.api_key = st.secrets["OPENAI_API_KEY"]
