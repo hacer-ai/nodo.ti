@@ -19,7 +19,7 @@ st.set_page_config(
 client = OpenAI()
 
 # Your chosen model
-MODEL = "gpt-4-1106-preview"
+MODEL = "gpt-4o"
 
 # Initialize session state variables
 if "session_id" not in st.session_state:
@@ -42,13 +42,7 @@ st.sidebar.markdown("Mentor Jobs To Be Done", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
-
-
 st.write("""<img height="70" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/flutter-head.png"/>""", unsafe_allow_html=True)
-
-# File uploader for CSV, XLS, XLSX
-
-
 
 # Initialize OpenAI assistant
 if "assistant" not in st.session_state:
