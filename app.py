@@ -36,42 +36,12 @@ if "retry_error" not in st.session_state:
 
 # Set up the page
 #st.set_page_config(page_title="hacer.ai - Automatización")
-st.sidebar.title("Nodo + Flutter")
+st.sidebar.title("Nodo + Jobs To Be Done")
 st.sidebar.divider()
-st.sidebar.markdown("Mentor de Flutter", unsafe_allow_html=True)
+st.sidebar.markdown("Mentor Jobs To Be Done", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
-
-tools_list = [
-    {
-        "type": "function",
-        "function": {
-            "name": "get_latest_company_news",
-            "description": "Fetches the latest news articles related to a specified company",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "company_name": {
-                        "type": "string",
-                        "description": "The name of the company"
-                    }
-                },
-                "required": ["company_name"]
-            }
-        }
-    }
-]
-
-GNEWS_API_KEY = st.secrets["GNEWS_API_KEY"]
-
-def get_latest_company_news(company_name):
-    url = f"https://gnews.io/api/v4/search?q={company_name}&token={GNEWS_API_KEY}&lang=en&sortBy=publishedAt"
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.json()['articles']
-    else:
-        return []
 
 
 st.write("""<img height="70" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/flutter-head.png"/>""", unsafe_allow_html=True)
@@ -101,7 +71,7 @@ elif hasattr(st.session_state.run, 'status') and st.session_state.run.status == 
                     st.markdown(message_text)
 
 # Chat input and message creation with file ID
-if prompt := st.chat_input("¿Cómo puedo ayudarte con tu proyecto de Flutter?"):
+if prompt := st.chat_input("¿Cómo puedo ayudarte con tu proceso de formación?"):
     with st.chat_message('user'):
         st.write(prompt)
 
