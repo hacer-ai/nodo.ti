@@ -10,7 +10,7 @@ import requests, os
 
 #Global Page Configuration
 st.set_page_config(
-    page_title="Nodo + Flutter",
+    page_title="Nodo + Jobs To Be Done",
     page_icon="🧠",
     initial_sidebar_state="collapsed",
 )
