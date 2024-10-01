@@ -11,7 +11,7 @@ import requests, os
 
 #Global Page Configuration
 st.set_page_config(
-    page_title="Nodo + Jobs To Be Done",
+    page_title="Nodo + Design Thinking Para Desarrolladores",
     page_icon="🧠",
     initial_sidebar_state="collapsed",
 )
@@ -32,6 +32,7 @@ if "messages" not in st.session_state:
 if "retry_error" not in st.session_state:
     st.session_state.retry_error = 0
 
+
 # Initialize OpenAI client
 client = OpenAI(
   base_url="https://oai.helicone.ai/v1", 
@@ -43,15 +44,16 @@ client = OpenAI(
   }
 )
 
+
 # Set up the page
 #st.set_page_config(page_title="hacer.ai - Automatización")
-st.sidebar.title("Nodo + Jobs To Be Done")
+st.sidebar.title("Nodo + Design Thinking Para Desarrolladores")
 st.sidebar.divider()
-st.sidebar.markdown("Mentor Jobs To Be Done", unsafe_allow_html=True)
+st.sidebar.markdown("Mentor De Design Thinking Para Desarrolladores", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
-st.write("""<img height="120" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/jobs-2.png"/>""", unsafe_allow_html=True)
+st.write("""<img height="120" src="https://es.nodoeafit.com/wp-content/uploads/2024/10/designthinking.png"/>""", unsafe_allow_html=True)
 
 st.markdown(
     """
