@@ -36,7 +36,7 @@ if "retry_error" not in st.session_state:
 client = OpenAI(
   base_url="https://oai.helicone.ai/v1", 
   default_headers={ 
-    "Helicone-Auth": f"Bearer " . st.secrets["HELICONE_API_KEY"] ,
+    "Helicone-Auth": f"Bearer " + st.secrets["HELICONE_API_KEY"] ,
     "Helicone-Property-Session": st.session_state.session_id,
     #"Helicone-Property-Conversation": "Additional Feedback",
     "Helicone-Property-App": st.secrets["APP_NAME"],
