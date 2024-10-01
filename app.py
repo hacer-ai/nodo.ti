@@ -10,7 +10,7 @@ import requests, os
 
 #Global Page Configuration
 st.set_page_config(
-    page_title="Nodo + Jobs To Be Done",
+    page_title="Nodo + Design Thinking Para Desarrolladores",
     page_icon="🧠",
     initial_sidebar_state="collapsed",
 )
@@ -36,9 +36,9 @@ if "retry_error" not in st.session_state:
 
 # Set up the page
 #st.set_page_config(page_title="hacer.ai - Automatización")
-st.sidebar.title("Nodo + Jobs To Be Done")
+st.sidebar.title("Nodo + Design Thinking Para Desarrolladores")
 st.sidebar.divider()
-st.sidebar.markdown("Mentor Jobs To Be Done", unsafe_allow_html=True)
+st.sidebar.markdown("Mentor Design Thinking Para Desarrolladores", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
