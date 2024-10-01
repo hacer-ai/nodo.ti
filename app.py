@@ -44,7 +44,7 @@ if "retry_error" not in st.session_state:
 #st.set_page_config(page_title="hacer.ai - Automatización")
 st.sidebar.title("Nodo + Design Thinking Para Desarrolladores")
 st.sidebar.divider()
-st.sidebar.markdown("Mentor Design Thinking Para Desarrolladores", unsafe_allow_html=True)
+st.sidebar.markdown("Mentor De Design Thinking Para Desarrolladores", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
