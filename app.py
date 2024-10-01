@@ -16,7 +16,13 @@ st.set_page_config(
 )
 
 # Initialize OpenAI client
-client = OpenAI()
+client = OpenAI(
+  base_url="https://oai.helicone.ai/v1", 
+  default_headers={ 
+    "Helicone-Auth": f"Bearer pk-helicone-wdjiypy-65tebai-v7lybfq-lslhohy",
+  }
+)
+
 
 # Your chosen model
 MODEL = "gpt-4o"
@@ -42,7 +48,7 @@ st.sidebar.markdown("Mentor Design Thinking Para Desarrolladores", unsafe_allow_
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
-st.write("""<img height="120" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/jobs-2.png"/>""", unsafe_allow_html=True)
+st.write("""<img height="120" src="https://es.nodoeafit.com/wp-content/uploads/2024/10/designthinking.png"/>""", unsafe_allow_html=True)
 
 st.markdown(
     """
