@@ -6,6 +6,7 @@ import time
 import io
 from openai import OpenAI
 import requests, os
+
 #from langchain.llms import OpenAI
 
 #Global Page Configuration
@@ -14,9 +15,6 @@ st.set_page_config(
     page_icon="🧠",
     initial_sidebar_state="collapsed",
 )
-
-# Initialize OpenAI client
-client = OpenAI()
 
 # Your chosen model
 MODEL = "gpt-4o"
@@ -33,6 +31,17 @@ if "messages" not in st.session_state:
 
 if "retry_error" not in st.session_state:
     st.session_state.retry_error = 0
+
+# Initialize OpenAI client
+client = OpenAI(
+  base_url="https://oai.helicone.ai/v1", 
+  default_headers={ 
+    "Helicone-Auth": f"Bearer " + st.secrets["HELICONE_API_KEY"] ,
+    "Helicone-Property-Session": st.session_state.session_id,
+    #"Helicone-Property-Conversation": "Additional Feedback",
+    "Helicone-Property-App": st.secrets["APP_NAME"],
+  }
+)
 
 # Set up the page
 #st.set_page_config(page_title="hacer.ai - Automatización")
