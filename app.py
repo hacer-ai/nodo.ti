@@ -60,7 +60,7 @@ st.markdown(
     <style>
     .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
     .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK, .stDeployButton {
+    .viewerBadge_text__1JaDK, .stDeployButton, .stAppToolbar, _viewerBadge_nim44_23, _profileContainer_51w34_53 {
         display: none;
     }
     </style>
