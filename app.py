@@ -11,7 +11,7 @@ import requests, os
 
 #Global Page Configuration
 st.set_page_config(
-    page_title="Nodo + Jobs To Be Done",
+    page_title="Nodo + Humanidades",
     page_icon="🧠",
     initial_sidebar_state="collapsed",
 )
@@ -47,13 +47,13 @@ client = OpenAI(
 
 # Set up the page
 #st.set_page_config(page_title="hacer.ai - Automatización")
-st.sidebar.title("Nodo + Jobs To Be Done (JTBD)")
+st.sidebar.title("Nodo + Humanidades")
 st.sidebar.divider()
-st.sidebar.markdown("Mentor De Jobs To Be Done", unsafe_allow_html=True)
+st.sidebar.markdown("Mentor De Humanidades", unsafe_allow_html=True)
 st.sidebar.markdown("hacer Agent Toolkit 1.0")
 st.sidebar.divider()
 
-st.write("""<img height="120" src="https://es.nodoeafit.com/wp-content/uploads/2024/09/jobs-2.png"/>""", unsafe_allow_html=True)
+st.write("""<img height="120" src="https://es.nodoeafit.com/wp-content/uploads/2024/11/HUMANIDADES.png"/>""", unsafe_allow_html=True)
 
 st.markdown(
     """
